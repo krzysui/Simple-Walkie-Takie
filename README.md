@@ -1,6 +1,4 @@
-# Simple-Walkie-Takie
-Simple Walkie Takie App for Mobile Devices (after hours vibecoded project).
-# 📻 Simple LAN & Server Walkie-Talkie
+# 📻 Simple-Walkie-Takie
 
 > Lekki, bezpieczny i ultraszybki komunikator Push-to-Talk (PTT) dla systemu Android z obsługą trybu bezserwerowego (P2P LAN) oraz dedykowanego serwera z panelem WWW.
 
@@ -23,5 +21,18 @@ Simple Walkie Takie App for Mobile Devices (after hours vibecoded project).
 
 ## 🛠 Wymagania i Uruchomienie
 
-### 1. Uruchomienie Serwera (Python 3.8+)
+### 1. Aplikacja Android (Kotlin)
+* **Wymagania:** Android 8.0 (API 26) lub nowszy, uprawnienia do mikrofonu.
+* Pobierz simplewalkietalkie.apk i zainstaluj na telefonie z androidem.
+
+### 2. Uruchomienie Serwera (Opcjonalnie - do trybu serwer)
 Serwer nie wymaga żadnych zewnętrznych bibliotek (`pip install`). Wystarczy uruchomić:
+
+    python walkietakieserver.py
+
+Po uruchomieniu można podłączyć się do serwera z poziomu aplikacji, co znosi wymóg przebywania w jednej sieci lokalnej z innymi użytkownikami.
+
+---
+
+## 🔒 Bezpieczeństwo i Prywatność
+Transmisja w pokojach chronionych hasłem jest szyfrowana w locie na telefonie nadawcy i deszyfrowana wyłącznie na telefonie odbiorcy. Serwer Relay przekazuje wyłącznie zaszyfrowane pakiety binarne i nie przechowuje żadnych danych audio.
