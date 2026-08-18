@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Walkie-Talkie | Szybka komunikacja PTT</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --primary: #38bdf8;
+            --accent: #ef4444;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        
+        header { text-align: center; margin-bottom: 60px; }
+        .badge { background: rgba(56, 189, 248, 0.1); color: var(--primary); padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: bold; border: 1px solid rgba(56, 189, 248, 0.2); }
+        h1 { font-size: 42px; font-weight: 800; margin: 20px 0 10px; }
+        p.subtitle { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto 30px; }
+        
+        .cta-buttons { display: flex; justify-content: center; gap: 16px; }
+        .btn { padding: 12px 24px; border-radius: 8px; font-weight: bold; text-decoration: none; transition: 0.2s; font-size: 15px; }
+        .btn-primary { background: var(--primary); color: #0f172a; }
+        .btn-primary:hover { opacity: 0.9; }
+        .btn-secondary { background: var(--card-bg); color: var(--text); border: 1px solid #334155; }
+        .btn-secondary:hover { background: #334155; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        .card { background: var(--card-bg); border: 1px solid #334155; border-radius: 12px; padding: 24px; }
+        .card h3 { font-size: 18px; margin-bottom: 10px; color: var(--primary); }
+        .card p { font-size: 14px; color: var(--text-muted); }
+
+        .spec-box { background: #020617; border: 1px solid #334155; border-radius: 12px; padding: 24px; font-family: monospace; font-size: 14px; margin-bottom: 60px; }
+        .spec-box h3 { font-family: sans-serif; color: var(--text); margin-bottom: 12px; }
+        
+        footer { text-align: center; font-size: 13px; color: var(--text-muted); border-top: 1px solid #334155; padding-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">Open-Source Project</span>
+            <h1>Simple Walkie-Talkie</h1>
+            <p class="subtitle">Błyskawiczna komunikacja Push-to-Talk (PTT) w sieciach lokalnych oraz dedykowanych serwerach z szyfrowaniem AES-256.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/krzysui/Simple-Walkie-Takie/tree/main" class="btn btn-primary" target="_blank">Zobacz na GitHubie</a>
+                <a href="https://github.com/krzysui/Simple-Walkie-Takie/blob/main/README.md" class="btn btn-secondary" target="_blank">Dokumentacja Protokołu</a>
+            </div>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <h3>⚡ Tryb P2P & Serwer</h3>
+                <p>Rozmawiaj bezserwerowo w sieci Wi-Fi lub łącz się z centralnym serwerem Relay obsługującym wiele pokoi jednocześnie.</p>
+            </div>
+            <div class="card">
+                <h3>🔒 Bezpieczeństwo E2EE</h3>
+                <p>Pokoje prywatne szyfrują strumień audio algorytmem AES-256 w oparciu o klucz wyliczany z hasła przez skrót SHA-256.</p>
+            </div>
+            <div class="card">
+                <h3>🖥 Web Dashboard</h3>
+                <p>Wbudowany panel administratora w przeglądarce (port 8080) z podglądem użytkowników na żywo i funkcjami moderacji.</p>
+            </div>
+        </div>
+
+        <div id="spec" class="spec-box">
+            <h3>Specyfikacja Techniczna:</h3>
+            <div>• Format Audio: 16 000 Hz, 16-bit Mono PCM</div>
+            <div>• Wzmocnienie mikrofonu: Cyfrowe Hardware Gain x2.5</div>
+            <div>• Port transmisji UDP: 50005</div>
+            <div>• Panel Administracyjny HTTP: 8080</div>
+            <div>• Heartbeat Rate: 3000 ms (Timeout: 15 s)</div>
+        </div>
+
+        <footer>
+            <p>Simple Walkie-Talkie &bull; Projekt Open-Source &bull; Zgodny z wytycznymi Google Play Store</p>
+        </footer>
+    </div>
+</body>
+</html>
